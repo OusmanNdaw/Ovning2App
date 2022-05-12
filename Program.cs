@@ -24,10 +24,10 @@ namespace Övning2App
 			Console.WriteLine("Mata in antingen 0 eller 1");
 
 			Console.ReadLine();
-            
-			int Inmatning = 1;
-			// int Inmatning;
-			switch (Inmatning)
+
+            int Inmatning = 1;
+            // int Inmatning;
+            switch (Inmatning)
 			{
 				case 0:
 					// Programmet stängs ner.
@@ -39,11 +39,12 @@ namespace Övning2App
 					break;
 				case 1:
 					{
-						// Felaktigt input om inte 0 eller 1
-						while (Inmatning != 1 && Inmatning != 0)
+                        // Felaktigt input om inte 0 eller 1
+                        if (Inmatning != 1 && Inmatning != 0)
 						{
 							Console.WriteLine("Er input är fel! Mata in antingen 0 eller 1!");
 						}
+                       // Console.ReadKey();
 					}
 					break;
 
