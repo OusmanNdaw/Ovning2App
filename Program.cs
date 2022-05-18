@@ -1,62 +1,116 @@
-﻿// See https://aka.ms/new-console-template for more information
-// pseudocode lexicon ab övn 2
-
-
+﻿
 using System;
 
 namespace Övning2App
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void main(string[] args)
 		{
-
-			/*->Berätta för användaren att de har kommit till huvudmenyn och de kommer
-			navigera genom att skriva in siffror för att testa olika funktioner.*/
-
-			Console.WriteLine("Välkomna till Huvudmenyn av detta program");
-			Console.WriteLine("Ni kommer att navigera genom att skriva in siffror för att testa olika funktioner!");
-
-
-			/*->Skapa skalet till en Switch-sats som till en början har Två Cases. 
-			   * Ett för ”0” som stänger ner programmet och ett default som berättar 
-			   * att det är felaktig input.*/
-			Console.WriteLine("Mata in antingen 0 eller 1");
-
-			Console.ReadLine();
-
-            int Inmatning = 1;
-            // int Inmatning;
-            switch (Inmatning)
+			bool visaMenu = true;
+			while (visaMenu)
 			{
-				case 0:
-					// Programmet stängs ner.
-					if (Inmatning == 0)
-					{
-						Environment.Exit(0);
-
-					}
-					break;
-				case 1:
-					{
-                        // Felaktigt input om inte 0 eller 1
-                        if (Inmatning != 1 && Inmatning != 0)
-						{
-							Console.WriteLine("Er input är fel! Mata in antingen 0 eller 1!");
-						}
-                       // Console.ReadKey();
-					}
-					break;
-
-
-				default:
-					{
-						Inmatning = 1;
-
-						Console.WriteLine("Mata 0 för att stänga ner Programmet eller 1 för att testa felaktig Input!");
-					}
-					break;
+				visaMenu = HuvudMeny();
 			}
 		}
-	}
+		private static bool HuvudMeny()
+		{
+			Console.Clear();
+			Console.WriteLine("Välkomna till HuvudMenyn:");
+			Console.WriteLine("1) Standard Priser");
+			Console.WriteLine("2) Sällsskaps Rabatter");
+			Console.WriteLine("3) Exit");
+			Console.Write("\r\nGör er val: ");
+
+			switch (Console.ReadLine())
+			{
+				case "1":
+					standardPriser();
+					return true;
+				case "2":
+					SällskapsRabatter();
+					return true;
+				case "3":
+					return false;
+				default:
+					return true;
+			}
+		}
+
+        /**
+		private static void standardPriser()
+        {
+           if(ålder under 20år){ 
+				Ungdompris=80 kr}
+			else if (ålder över 64 år){ 
+				Pensionärspris = 90 kr
+		};
+			else
+			{
+				Standardpris: 120 kr 
+			}
+		}
+			
+        private static string Inmatning()
+		{
+			Console.Write("Varsågoda och gör er val: ");
+			return Console.ReadLine();
+
+		}
+		**/
+			 private static string ålder(){
+		          
+			 Console.WriteLine("Ange er ålder!");
+			 Console.ReadLine();
+		          
+		}
+
+
+        int inMatning == public Program(int inMatning, int ålder = 0)
+        {
+            this.inMatning = inMatning;
+            this.ålder = ålder;
+        }
+
+
+	 
+		private static string standardPriser(
+			
+			standardPriser new standardPriser = StandardPriser();
+        // Vad sägs om defaultStandardPriser ???
+        standardPris = 120;		
+			);
+		private static string SällskapsRabatter() {
+
+            // Vad sägs om Rabatter istf SällskapsRabatter ???? som namn.
+
+
+            Console.Write("Hur många är ni i det här Sällskapet?");
+			Console.ReadLine();
+
+			Console.Write("Vill ni vara snäll och ange er ålder. Varje av er.");
+			Console.ReadLine();
+
+			Int32 ålder;
+			if (ålder <= 20) {
+				Console.WriteLine("Ni är Ungdomar och ni ska betala 80 kr!")
+				else if (ålder >= 64)
+					Console.WriteLine("Ni är Pensionär och ni ska betala 90 kr!");
+				else if ((ålder = 5)								{
+					Console.WriteLine("Välkomna in! Ni får gå in gratis!");
+				}
+				else if (ålder = 100))
+                {
+					Console.WriteLine("Välkomna in! Ni får gå in gratis!");
+				}
+            }
+		}
+		private static void AktuellaPriser(string message)
+		{
+			Console.WriteLine($"\r\nBio Priser är följande: {message}");
+			Console.Write("\r\nTryck Enter för att återgå till Huvudmenyn!");
+			Console.ReadLine();
+		}
+
+    }
 }
